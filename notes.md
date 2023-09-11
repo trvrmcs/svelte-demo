@@ -39,3 +39,29 @@ pipenv run python -m backend
 
 and navigate to http://localhost:8000/index.html
 
+# JSON Editor 
+```
+npm install -D svelte-jsoneditor 
+```
+And then in a component:
+
+```html
+<script>
+    import { JSONEditor } from "svelte-jsoneditor";
+
+    let content = {
+        text: undefined, // can be used to pass a stringified JSON document instead
+        json: {},
+    };
+</script>
+
+<div>
+    <JSONEditor bind:content />
+</div>
+
+```
+
+Note: this adds about 800kb to the output JS, which is still less than 
+shipping the vanilla code.
+
+ 

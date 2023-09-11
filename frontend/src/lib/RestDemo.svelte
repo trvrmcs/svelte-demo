@@ -17,7 +17,7 @@
 
 <h3>This is an instance of MyComponent</h3>
 
-<button on:click={something}>
+<button class="button is-info" on:click={something}>
     Retrieve a value from the Python backend via REST</button
 >
 <pre>{foo}</pre>

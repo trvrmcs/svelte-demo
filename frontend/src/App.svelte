@@ -1,10 +1,12 @@
 <script lang="ts">
   import svelteLogo from "./assets/svelte.svg";
-  import viteLogo from "/vite.svg";
-  import Counter from "./lib/Counter.svelte";
-  import MyComponent from "./lib/MyComponent.svelte";
-  import MyCounter from "./lib/MyCounter.svelte";
+  import fastAPILogo from "./assets/fastapi.svg";
+  import bulmaLogo from "./assets/bulma.svg";
 
+  import Counter from "./lib/Counter.svelte";
+  import RestDemo from "./lib/RestDemo.svelte";
+  import MyCounter from "./lib/MyCounter.svelte";
+  import Hero from "./lib/Hero.svelte";
   import { onMount } from "svelte";
   let i: number = 0;
   onMount(() => {
@@ -21,39 +23,66 @@
   });
 </script>
 
-<main>
-  <div>
-    <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-      <img src={viteLogo} class="logo" alt="Vite Logo" />
-    </a>
-    <a href="https://svelte.dev" target="_blank" rel="noreferrer">
-      <img src={svelteLogo} class="logo svelte" alt="Svelte Logo" />
-    </a>
-  </div>
-  <h1>Vite, Svelte, Typescript, FastAPI</h1>
+<Hero />
 
-  <div class="card">
-    <Counter />
-  </div>
-  <div class="card">
-    <MyComponent />
-  </div>
-  <div class="card">
-    <MyCounter {i} />
-  </div>
-</main>
+<section class="section">
+  <h1 class="title">Basic Svelte bindings</h1>
+
+  <Counter />
+</section>
+
+<section class="section">
+  <h1 class="title">REST example</h1>
+  <RestDemo />
+</section>
+
+<section class="section">
+  <h1 class="title">Websocket Integration</h1>
+
+  <MyCounter {i} />
+</section>
+
+<section class="section">
+  <h1 class="title">Built With</h1>
+
+  <article class="media">
+    <figure class="media-left">
+      <p class="image is-64x64">
+        <img src={fastAPILogo} alt="fastAPI logo" />
+      </p>
+    </figure>
+    <div class="media-content">
+      <div class="content">
+        <h3 class="title is-3">FastAPI</h3>
+      </div>
+    </div>
+  </article>
+  <article class="media">
+    <figure class="media-left">
+      <p class="image is-64x64">
+        <img src={bulmaLogo} alt="bulma logo" />
+      </p>
+    </figure>
+    <div class="media-content">
+      <div class="content">
+        <h3 class="title is-3">Bulma</h3>
+      </div>
+    </div>
+  </article>
+
+  <article class="media">
+    <figure class="media-left">
+      <p class="image is-64x64">
+        <img src={svelteLogo} alt="svelte logo" />
+      </p>
+    </figure>
+    <div class="media-content">
+      <div class="content">
+        <h3 class="title is-3">Svelte</h3>
+      </div>
+    </div>
+  </article>
+</section>
 
 <style>
-  .logo {
-    height: 6em;
-    padding: 1.5em;
-    will-change: filter;
-    transition: filter 300ms;
-  }
-  .logo:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
-  }
-  .logo.svelte:hover {
-    filter: drop-shadow(0 0 2em #ff3e00aa);
-  }
 </style>
