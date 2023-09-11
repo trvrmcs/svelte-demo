@@ -15,6 +15,9 @@
     };
 </script>
 
-<h1>This is an instance of MyComponent</h1>
-<h2>The value of foo is {foo}</h2>
-<button on:click={something}> Make a REST call </button>
+<h3>This is an instance of MyComponent</h3>
+
+<button on:click={something}>
+    Retrieve a value from the Python backend via REST</button
+>
+<pre>{foo}</pre>
