@@ -5,13 +5,15 @@
 
 
 ### Frontend
+```
 cd /workspaces/svelte-demo/frontend
 npm install  
-npum run build
-
+npm run build
+```
 
 ### Backend 
+```
 cd /workspaces/svelte-demo 
-pipenv sync 
-
+pipenv sync --dev
 pipenv run python -m backend
+```
